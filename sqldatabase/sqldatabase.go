@@ -17,8 +17,9 @@ var dbMutex sync.Mutex
 
 func InitDatabase() error {
 	var err error
+	//=======>IMPORTANT
 	// Initialize the database connection. Replace with your own credentials.
-	db, err = sql.Open("mysql", "u549750371_indicarena:IndicArena@2023@tcp(62.72.28.154:3306)/u549750371_indiblockchain")
+	db, err = sql.Open("mysql", "your_username:your_password@tcp(your_db_host:3306)/your_database_name")
 	if err != nil {
 		return fmt.Errorf("Failed to open database: %v", err)
 	}
